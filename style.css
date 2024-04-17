@@ -1,63 +1,65 @@
 @keyframes slideAnimation {
-    from {
-      transform: translateY(-50px);
-    }
-    to {
-      transform: translateY(0);
-    }
+  from {
+    transform: translateY(-50px);
   }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  to {
+    transform: translateY(0);
   }
-  
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.content {
+  width: calc(100% / 3 - 20px);
+  height: 100px;
+  margin: 10px;
+}
+
+@media (max-width: 599px) {
   .content {
-    width: calc(100% / 3 - 20px);
-    height: 100px;
-    margin: 10px;
+    width: calc(100% - 20px);
+    animation: slideAnimation 0.3s ease;
   }
-  
-  @media (max-width: 599px) {
-    .content {
-      animation: slideAnimation 0.3s ease;
-    }
+}
+
+@media (min-width: 600px) and (max-width: 959px) {
+  .content {
+    width: calc(50% - 20px);
+    animation: slideAnimation 0.3s ease;
   }
-  
-  @media (min-width: 600px) and (max-width: 959px) {
-    .content {
-      animation: slideAnimation 0.3s ease;
-    }
+}
+
+@media (min-width: 960px) {
+  .content {
+    width: calc(33.33% - 20px);
+    animation: slideAnimation 0.3s ease;
   }
-  
-  @media (min-width: 960px) {
-    .content {
-      animation: slideAnimation 0.3s ease;
-    }
-  }
-  
-  #red {
-    background-color: red;
-  }
-  
-  #green {
-    background-color: green;
-  }
-  
-  #blue {
-    background-color: blue;
-  }
-  
-  #yellow {
-    background-color: yellow;
-  }
-  
-  #purple {
-    background-color: purple;
-  }
-  
-  #grey {
-    background-color: grey;
-  }
-  
+}
+
+#red {
+  background-color: red;
+}
+
+#green {
+  background-color: green;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#purple {
+  background-color: purple;
+}
+
+#grey {
+  background-color: grey;
+}
